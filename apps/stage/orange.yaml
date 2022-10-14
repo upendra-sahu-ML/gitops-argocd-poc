@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: orange
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: orange
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: stage/orange
+    repoURL: https://github.com/cisco-sfcn/gitops-poc.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
