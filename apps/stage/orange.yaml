@@ -12,7 +12,7 @@ spec:
   project: default
   source:
     path: stage/orange
-    repoURL: https://github.com/cisco-sfcn/gitops-poc.git
+    repoURL: https://github.com/upendrasahu/gitops-argocd-poc.git
     targetRevision: main
   syncPolicy:
     automated:

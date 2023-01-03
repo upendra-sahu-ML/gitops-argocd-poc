@@ -12,8 +12,8 @@ spec:
   project: default
   source:
     path: prod/apple
-    repoURL: https://github.com/cisco-sfcn/gitops-poc.git
-    targetRevision: main
+    repoURL: https://github.com/upendrasahu/gitops-argocd-poc.git
+    targetRevision: master
   syncPolicy:
     automated:
       prune: true
